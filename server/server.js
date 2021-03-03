@@ -1,8 +1,14 @@
 //Requirements
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require('path');
+
 //Routes
 const routes = require("./routes/api");
+
+//Atlas uri 
+require('dotenv').config()
+const uri = process.env.ATLAS_URI;
 
 //App config
 const app = express();
@@ -14,8 +20,9 @@ app.use("/db", routes);
 //Mongo config
 mongoose.connect(uri, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
 });
 
 //Listener
-app.listen(PORT, console.log(`Server started on port ${PORT}`));
+app.listen(PORT, console.log(`Server running on port ${PORT}`));
