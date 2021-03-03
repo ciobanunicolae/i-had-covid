@@ -7,7 +7,6 @@ const Entry = require("../models/Entry");
 //Routes
 //Default page
 router.get("/", (req, res) => {
-    var Entry = 
     Entry.find({})
         .then(data => {
             console.log('Data: ', data);
