@@ -5,7 +5,6 @@ const router = express.Router();
 const Entry = require("../models/Entry");
 
 //Routes
-
 //Default page
 router.get("/", (req, res) => {
     var Entry = 
