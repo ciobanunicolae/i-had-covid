@@ -15,7 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use("/db", routes);
+app.use("/", routes);
 
 //Mongo config
 mongoose.connect(uri, {
