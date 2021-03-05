@@ -1,0 +1,26 @@
+{
+  "name": "i-had-covid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "dependencies": {
+    "concurrently": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciobanunicolae/i-had-covid.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ciobanunicolae/i-had-covid/issues"
+  },
+  "homepage": "https://github.com/ciobanunicolae/i-had-covid#readme"
+}
